@@ -53,7 +53,7 @@ Model summary:
 `MENU_NOTE` ("Усі коктейлі — 400 мл…") is shown once per drinks section (or in footer).
 
 ⚠️ One assumption baked into the data: the spirit for the alco **Персиковий лимонад**
-wasn't specified in the source doc; house default (Finka/Okhard) was used — confirm.
+wasn't specified in the source doc; house default (Finlandia/Oakheart) was used — confirm.
 
 ---
 

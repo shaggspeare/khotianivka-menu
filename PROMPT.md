@@ -28,7 +28,7 @@ Key data behaviour:
 - Each item has `variants`, one per section it belongs to.
 - Cocktails with both versions have a `non-alco` **and** an `alco` variant — they must
   appear in **both** tabs, each showing that variant's `price`, optional `label`
-  ("Без алкоголю" / "З алкоголем"), and `extra` (the spirit, e.g. "+ Finka або Okhard").
+  ("Без алкоголю" / "З алкоголем"), and `extra` (the spirit, e.g. "+ Finlandia або Oakheart").
 - `price: null` → render "уточнюється".
 
 ## What to build
@@ -83,5 +83,5 @@ Ukrainian `<title>` "Beach Santa — пляжний бар у Хотянівці
 ## Notes / assumptions to confirm with me
 - Treating this as read-only (no ordering) for v1.
 - Спирт для алкогольного «Персикового лимонаду» не був вказаний у меню — поставив
-  дефолт Finka/Okhard, треба підтвердити.
+  дефолт Finlandia/Oakheart, треба підтвердити.
 - Footer contacts and hours are placeholders for now.

@@ -4,7 +4,7 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-line px-5 py-10 sm:px-8">
       <div className="mx-auto max-w-xl text-sm text-muted">
-        <p className="text-base font-medium text-ink">Beach Santa</p>
+        <p className="text-base font-medium text-ink">Beach Santa Khotianivka</p>
         <p className="mt-1">Хотянівка, пляж</p>
 
         <dl className="mt-6 space-y-1">

@@ -60,7 +60,7 @@ export const SECTIONS: Section[] = [
 
 export const MENU_NOTE = "Усі коктейлі — 400 мл, якщо не вказано інше. Стаканчики стандартні.";
 
-const SPIRIT_DEFAULT = "+ алкоголь на вибір: Finka або Okhard";
+const SPIRIT_DEFAULT = "+ алкоголь на вибір: Finlandia або Oakheart";
 
 export const MENU: MenuItem[] = [
   /* ─────────────  КОКТЕЙЛІ (без алко + алко)  ───────────── */
@@ -71,7 +71,7 @@ export const MENU: MenuItem[] = [
     volume: "400 мл",
     variants: [
       { section: "non-alco", price: 100, label: "Без алкоголю" },
-      { section: "alco", price: 200, label: "З алкоголем", extra: "+ Finka або Okhard" },
+      { section: "alco", price: 200, label: "З алкоголем", extra: "+ Finlandia або Oakheart" },
     ],
   },
   {
@@ -81,7 +81,7 @@ export const MENU: MenuItem[] = [
     volume: "400 мл",
     variants: [
       { section: "non-alco", price: 100, label: "Без алкоголю" },
-      { section: "alco", price: 200, label: "З алкоголем", extra: "+ Okhard" },
+      { section: "alco", price: 200, label: "З алкоголем", extra: "+ Oakheart" },
     ],
   },
   {
@@ -91,7 +91,7 @@ export const MENU: MenuItem[] = [
     volume: "400 мл",
     variants: [
       { section: "non-alco", price: 100, label: "Без алкоголю" },
-      { section: "alco", price: 200, label: "З алкоголем", extra: "+ Finka або Okhard" },
+      { section: "alco", price: 200, label: "З алкоголем", extra: "+ Finlandia або Oakheart" },
     ],
   },
   {
@@ -101,7 +101,7 @@ export const MENU: MenuItem[] = [
     volume: "400 мл",
     variants: [
       { section: "non-alco", price: 100, label: "Без алкоголю" },
-      { section: "alco", price: 200, label: "З алкоголем", extra: "+ Finka" },
+      { section: "alco", price: 200, label: "З алкоголем", extra: "+ Finlandia" },
     ],
   },
   {
@@ -111,7 +111,7 @@ export const MENU: MenuItem[] = [
     volume: "400 мл",
     variants: [
       { section: "non-alco", price: 120, label: "Без алкоголю" },
-      { section: "alco", price: 220, label: "З алкоголем", extra: "+ Okhard або Finka" },
+      { section: "alco", price: 220, label: "З алкоголем", extra: "+ Oakheart або Finlandia" },
     ],
   },
   {
@@ -122,7 +122,7 @@ export const MENU: MenuItem[] = [
     volume: "400 мл",
     variants: [
       { section: "non-alco", price: 100, label: "Без алкоголю" },
-      { section: "alco", price: 200, label: "З алкоголем", extra: "+ Finka або Okhard" },
+      { section: "alco", price: 200, label: "З алкоголем", extra: "+ Finlandia або Oakheart" },
     ],
   },
   {
@@ -131,7 +131,7 @@ export const MENU: MenuItem[] = [
     description: "Пюре персик, спрайт або мінеральна вода",
     volume: "400 мл",
     // ⚠️ ASSUMPTION: doc didn't name the spirit for the alco version.
-    // Used house default (Finka / Okhard). Confirm with client.
+    // Used house default (Finlandia / Oakheart). Confirm with client.
     variants: [
       { section: "non-alco", price: 120, label: "Без алкоголю" },
       { section: "alco", price: 220, label: "З алкоголем", extra: SPIRIT_DEFAULT },
@@ -178,7 +178,7 @@ export const MENU: MenuItem[] = [
   {
     id: "zirochka-palay",
     name: "Зірочка палай",
-    description: "Горілка Finka, Passoã, пюре маракуї, ванільний сироп, лимон, просекко",
+    description: "Горілка Finlandia, Passoã, пюре маракуї, ванільний сироп, лимон, просекко",
     tags: ["Новинка"],
     variants: [{ section: "alco", price: 300 }],
   },
@@ -235,6 +235,12 @@ export const MENU: MenuItem[] = [
     description: "Фісташка, шоколад, пломбір, крем-брюле",
     volume: "70 г",
     variants: [{ section: "snacks", price: 50 }],
+  },
+  {
+    id: "chupa-chups",
+    name: "Chupa Chups",
+    volume: "1 шт",
+    variants: [{ section: "snacks", price: 10 }],
   },
 ];
 
