@@ -71,7 +71,7 @@ export const MENU: MenuItem[] = [
     volume: "400 мл",
     variants: [
       { section: "non-alco", price: 100, label: "Без алкоголю" },
-      { section: "alco", price: 200, label: "З алкоголем", extra: "+ Finlandia або Oakheart" },
+      { section: "alco", price: 200, label: "З алкоголем", extra: "+ алкоголь на вибір: Finlandia або Oakheart" },
     ],
   },
   {
@@ -81,7 +81,7 @@ export const MENU: MenuItem[] = [
     volume: "400 мл",
     variants: [
       { section: "non-alco", price: 100, label: "Без алкоголю" },
-      { section: "alco", price: 200, label: "З алкоголем", extra: "+ Oakheart" },
+      { section: "alco", price: 200, label: "З алкоголем", extra: "+ алкоголь на вибір: Oakheart" },
     ],
   },
   {
@@ -91,7 +91,7 @@ export const MENU: MenuItem[] = [
     volume: "400 мл",
     variants: [
       { section: "non-alco", price: 100, label: "Без алкоголю" },
-      { section: "alco", price: 200, label: "З алкоголем", extra: "+ Finlandia або Oakheart" },
+      { section: "alco", price: 200, label: "З алкоголем", extra: "+ алкоголь на вибір: Finlandia або Oakheart" },
     ],
   },
   {
@@ -101,7 +101,7 @@ export const MENU: MenuItem[] = [
     volume: "400 мл",
     variants: [
       { section: "non-alco", price: 100, label: "Без алкоголю" },
-      { section: "alco", price: 200, label: "З алкоголем", extra: "+ Finlandia" },
+      { section: "alco", price: 200, label: "З алкоголем", extra: "+ алкоголь на вибір: Finlandia" },
     ],
   },
   {
@@ -111,7 +111,7 @@ export const MENU: MenuItem[] = [
     volume: "400 мл",
     variants: [
       { section: "non-alco", price: 120, label: "Без алкоголю" },
-      { section: "alco", price: 220, label: "З алкоголем", extra: "+ Oakheart або Finlandia" },
+      { section: "alco", price: 220, label: "З алкоголем", extra: "+ алкоголь на вибір: Oakheart або Finlandia" },
     ],
   },
   {
@@ -122,7 +122,7 @@ export const MENU: MenuItem[] = [
     volume: "400 мл",
     variants: [
       { section: "non-alco", price: 100, label: "Без алкоголю" },
-      { section: "alco", price: 200, label: "З алкоголем", extra: "+ Finlandia або Oakheart" },
+      { section: "alco", price: 200, label: "З алкоголем", extra: "+ алкоголь на вибір: Finlandia або Oakheart" },
     ],
   },
   {
