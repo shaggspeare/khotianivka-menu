@@ -81,7 +81,7 @@ export const MENU: MenuItem[] = [
     volume: "400 мл",
     variants: [
       { section: "non-alco", price: 100, label: "Без алкоголю" },
-      { section: "alco", price: 200, label: "З алкоголем", extra: "+ алкоголь на вибір: Oakheart" },
+      { section: "alco", price: 200, label: "З алкоголем", extra: "+ Oakheart" },
     ],
   },
   {
@@ -101,7 +101,7 @@ export const MENU: MenuItem[] = [
     volume: "400 мл",
     variants: [
       { section: "non-alco", price: 100, label: "Без алкоголю" },
-      { section: "alco", price: 200, label: "З алкоголем", extra: "+ алкоголь на вибір: Finlandia" },
+      { section: "alco", price: 200, label: "З алкоголем", extra: "+ Finlandia" },
     ],
   },
   {
