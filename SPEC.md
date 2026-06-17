@@ -47,7 +47,7 @@ Model summary:
 - Each `MenuItem` has one or more `variants`, **one per section** it appears in.
   - Cocktails available in both forms have a `non-alco` variant **and** an `alco`
     variant → they render in *both* tabs with the correct price + spirit note.
-  - `price: null` → render as `уточнюється` (used for popcorn).
+  - `price: null` → render as `уточнюється` (for items not yet priced; no current item uses this).
 - `itemsForSection(id)` helper returns items for a tab with the right variant resolved.
 
 `MENU_NOTE` ("Усі коктейлі — 400 мл…") is shown once per drinks section (or in footer).
@@ -192,7 +192,7 @@ editorial layout than a colourful app.
 - [ ] Dual cocktails appear in **both** non-alco and alco tabs with the right price + spirit.
 - [ ] Sticky tab nav with working smooth-scroll + scroll-spy active state.
 - [ ] "Новинка" badges on Апероль шприц, Белліні, Зірочка палай.
-- [ ] Popcorn shows "уточнюється" instead of a price.
+- [ ] Items with `price: null` render "уточнюється" instead of a number (no current item triggers this).
 - [ ] Looks good on a 360–390px phone; readable in bright light; AA contrast.
 - [ ] Static build, no console errors, deploys to Vercel.
 - [ ] All visible text is Ukrainian.

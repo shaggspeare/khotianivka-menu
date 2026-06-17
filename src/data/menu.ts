@@ -206,8 +206,8 @@ export const MENU: MenuItem[] = [
   {
     id: "popcorn-cheese",
     name: "Попкорн «Супер сир»",
-    note: "Грамаж і ціну уточнюємо",
-    variants: [{ section: "snacks", price: null }],
+    volume: "100 г",
+    variants: [{ section: "snacks", price: 100 }],
   },
   {
     id: "apple-chips",

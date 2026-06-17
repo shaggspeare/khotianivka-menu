@@ -1,7 +1,6 @@
 import { MenuHero } from "@/components/MenuHero";
 import { MenuSection } from "@/components/MenuSection";
 import { SectionNav } from "@/components/SectionNav";
-import { SiteFooter } from "@/components/SiteFooter";
 import { SECTIONS } from "@/data/menu";
 
 export default function Home() {
@@ -14,7 +13,6 @@ export default function Home() {
           <MenuSection key={section.id} section={section} />
         ))}
       </main>
-      <SiteFooter />
     </>
   );
 }
