@@ -183,6 +183,13 @@ export const MENU: MenuItem[] = [
     variants: [{ section: "alco", price: 300 }],
   },
   {
+    id: "shot",
+    name: "Шот",
+    description: "Finlandia або Oakheart, лимон або апельсин",
+    volume: "40 мл",
+    variants: [{ section: "alco", price: 100 }],
+  },
+  {
     id: "beer-corona",
     name: "Пиво Corona",
     volume: "0.33 л",

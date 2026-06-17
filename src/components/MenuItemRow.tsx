@@ -13,13 +13,17 @@ export function MenuItemRow({ item }: MenuItemRowProps) {
 
   return (
     <li className="py-4">
-      <div className="flex items-baseline justify-between gap-4">
-        <span className="font-medium text-ink">
-          {name}
-          {tags?.map((tag) => (
-            <Tag key={tag}>{tag}</Tag>
-          ))}
-        </span>
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <span className="font-medium text-ink">{name}</span>
+          {tags && tags.length > 0 && (
+            <div className="mt-0.5 flex gap-2">
+              {tags.map((tag) => (
+                <Tag key={tag}>{tag}</Tag>
+              ))}
+            </div>
+          )}
+        </div>
         <span className="shrink-0 whitespace-nowrap pl-4 text-right">
           {variant.label && <span className="mr-1 text-muted">{variant.label} ·</span>}
           <PriceTag price={variant.price} />
