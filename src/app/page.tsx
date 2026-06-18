@@ -1,5 +1,6 @@
 import { MenuHero } from "@/components/MenuHero";
 import { MenuSection } from "@/components/MenuSection";
+import { PaymentSection } from "@/components/PaymentSection";
 import { SectionNav } from "@/components/SectionNav";
 import { SECTIONS } from "@/data/menu";
 
@@ -12,6 +13,7 @@ export default function Home() {
         {SECTIONS.map((section) => (
           <MenuSection key={section.id} section={section} />
         ))}
+        <PaymentSection />
       </main>
     </>
   );
