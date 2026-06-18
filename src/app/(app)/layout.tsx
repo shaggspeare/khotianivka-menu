@@ -7,9 +7,9 @@ const inter = Inter({
   subsets: ["latin", "cyrillic"],
 });
 
-const TITLE = "Beach Santa — пляжний бар у Хотянівці";
+const TITLE = "Beach Santa Khotianivka — пляжний бар у Хотянівці";
 const DESCRIPTION =
-  "Меню пляжного бару Beach Santa у Хотянівці: безалкогольні та алкогольні коктейлі, лимонади, пиво, снеки.";
+  "Меню пляжного бару Beach Santa Khotianivka у Хотянівці: безалкогольні та алкогольні коктейлі, лимонади, пиво, снеки.";
 
 export const metadata: Metadata = {
   title: TITLE,

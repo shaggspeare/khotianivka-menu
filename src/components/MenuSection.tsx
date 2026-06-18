@@ -1,12 +1,19 @@
 import { MenuItemRow } from "./MenuItemRow";
-import { MENU_NOTE, itemsForSection, type Section } from "@/data/menu";
+import { MENU_NOTE, type MenuItem, type Section } from "@/data/menu";
 
 interface MenuSectionProps {
   section: Section;
+  items: MenuItem[];
 }
 
-export function MenuSection({ section }: MenuSectionProps) {
-  const items = itemsForSection(section.id);
+export function MenuSection({ section, items }: MenuSectionProps) {
+  const sectionItems = items
+    .filter((item) => item.variants.some((v) => v.section === section.id))
+    .map((item) => ({
+      ...item,
+      variant: item.variants.find((v) => v.section === section.id)!,
+    }));
+
   const showNote = section.id !== "snacks";
 
   return (
@@ -18,7 +25,7 @@ export function MenuSection({ section }: MenuSectionProps) {
         {section.subtitle && <p className="mt-1 text-sm text-muted">{section.subtitle}</p>}
 
         <ul className="mt-6 divide-y divide-line border-t border-line">
-          {items.map((item) => (
+          {sectionItems.map((item) => (
             <MenuItemRow key={item.id} item={item} />
           ))}
         </ul>

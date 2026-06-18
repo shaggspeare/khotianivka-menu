@@ -2,22 +2,34 @@
   "name": "khotianivka-menu",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
+    "generate:importmap": "cross-env NODE_OPTIONS=--no-deprecation payload generate:importmap",
+    "generate:types": "cross-env NODE_OPTIONS=--no-deprecation payload generate:types",
+    "seed": "cross-env NODE_OPTIONS=--no-deprecation payload run src/seed.ts"
   },
   "dependencies": {
+    "@payloadcms/db-mongodb": "^3.85.1",
+    "@payloadcms/next": "^3.85.1",
+    "@payloadcms/richtext-lexical": "^3.85.1",
+    "graphql": "^16.14.2",
     "next": "16.2.9",
+    "payload": "^3.85.1",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "sharp": "^0.35.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "cross-env": "^10.1.0",
     "eslint": "^9",
     "eslint-config-next": "16.2.9",
     "tailwindcss": "^4",
