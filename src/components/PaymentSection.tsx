@@ -42,6 +42,34 @@ export function PaymentSection() {
               Переказ через Privat24 →
             </a>
           </div>
+
+          {/* ПУМБ */}
+          <div className="py-5">
+            <p className="font-medium text-ink">ПУМБ</p>
+            <p className="mt-1 text-sm text-muted">Павло П.</p>
+            <a
+              href="https://mobile-app.pumb.ua/1BEH6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 inline-block text-sm text-accent underline underline-offset-2"
+            >
+              Переказати через ПУМБ →
+            </a>
+          </div>
+
+          {/* А-Банк */}
+          <div className="py-5">
+            <p className="font-medium text-ink">А-Банк</p>
+            <p className="mt-1 text-sm text-muted">Павло Прудкий</p>
+            <a
+              href="https://pay.a-bank.com.ua/card/hF3g5OcEFes64L2H"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 inline-block text-sm text-accent underline underline-offset-2"
+            >
+              Переказати через А-Банк →
+            </a>
+          </div>
         </div>
       </div>
     </section>
