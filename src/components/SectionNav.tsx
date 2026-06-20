@@ -5,6 +5,7 @@ import { SECTIONS } from "@/data/menu";
 
 const ALL_TABS = [
   ...SECTIONS.map((s) => ({ id: s.id, title: s.title })),
+  { id: "favorites", title: "Обране" },
   { id: "payment", title: "Оплата" },
 ];
 

@@ -216,6 +216,10 @@ export interface MenuItem {
    * Менше число — вище в списку
    */
   order?: number | null;
+  /**
+   * Лічильник вподобань (оновлюється автоматично з сайту)
+   */
+  likes?: number | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -406,6 +410,7 @@ export interface MenuItemsSelect<T extends boolean = true> {
         id?: T;
       };
   order?: T;
+  likes?: T;
   updatedAt?: T;
   createdAt?: T;
 }

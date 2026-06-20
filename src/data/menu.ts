@@ -50,6 +50,8 @@ export interface MenuItem {
   variants: ItemVariant[];
   /** optional image path under /public, e.g. "/menu/mojito.jpg" */
   image?: string;
+  /** total like count from CMS */
+  likes?: number;
 }
 
 export const SECTIONS: Section[] = [

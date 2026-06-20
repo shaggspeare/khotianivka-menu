@@ -1,3 +1,4 @@
+import { LikeButton } from "./LikeButton";
 import { PriceTag } from "./PriceTag";
 import { Tag } from "./Tag";
 import type { ItemVariant, MenuItem } from "@/data/menu";
@@ -7,7 +8,7 @@ interface MenuItemRowProps {
 }
 
 export function MenuItemRow({ item }: MenuItemRowProps) {
-  const { name, description, volume, note, tags, variant } = item;
+  const { name, description, volume, note, tags, variant, id, likes } = item;
   const meta = [volume, note].filter(Boolean).join(" · ");
   const descriptionLine = [description, variant.extra].filter(Boolean).join(" ");
 
@@ -24,10 +25,13 @@ export function MenuItemRow({ item }: MenuItemRowProps) {
             </div>
           )}
         </div>
-        <span className="shrink-0 whitespace-nowrap pl-4 text-right">
-          {variant.label && <span className="mr-1 text-muted">{variant.label} ·</span>}
-          <PriceTag price={variant.price} />
-        </span>
+        <div className="flex shrink-0 flex-col items-end gap-1 pl-4 text-right">
+          <span className="whitespace-nowrap">
+            {variant.label && <span className="mr-1 text-muted">{variant.label} ·</span>}
+            <PriceTag price={variant.price} />
+          </span>
+          <LikeButton itemId={id} initialLikes={likes ?? 0} />
+        </div>
       </div>
 
       {descriptionLine && <p className="mt-1 text-sm text-muted">{descriptionLine}</p>}

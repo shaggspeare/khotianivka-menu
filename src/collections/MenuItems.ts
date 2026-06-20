@@ -4,7 +4,7 @@ export const MenuItems: CollectionConfig = {
   slug: 'menu-items',
   admin: {
     useAsTitle: 'name',
-    defaultColumns: ['name', 'variants', 'order'],
+    defaultColumns: ['name', 'variants', 'order', 'likes'],
     description: 'Всі позиції меню. Кожна позиція може мати кілька варіантів (з/без алкоголю, різні секції).',
     components: {
       beforeList: ['/components/admin/MenuOrderLink#MenuOrderLink'],
@@ -103,6 +103,16 @@ export const MenuItems: CollectionConfig = {
       type: 'number',
       label: 'Порядок відображення',
       admin: { description: 'Менше число — вище в списку' },
+    },
+    {
+      name: 'likes',
+      type: 'number',
+      label: 'Вподобань',
+      defaultValue: 0,
+      admin: {
+        position: 'sidebar',
+        description: 'Лічильник вподобань (оновлюється автоматично з сайту)',
+      },
     },
   ],
 }

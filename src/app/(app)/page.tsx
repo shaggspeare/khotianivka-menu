@@ -1,6 +1,7 @@
 import { getPayload } from 'payload'
 import configPromise from '@payload-config'
 
+import { FavoritesSection } from "@/components/FavoritesSection";
 import { MenuHero } from "@/components/MenuHero";
 import { MenuSection } from "@/components/MenuSection";
 import { PaymentSection } from "@/components/PaymentSection";
@@ -23,7 +24,6 @@ export default async function Home() {
     }),
   ])
 
-  // Map Payload docs to the MenuItem shape the components already expect
   const menuItems: MenuItem[] = menuResult.docs.map((doc) => ({
     id: doc.id,
     name: doc.name,
@@ -31,6 +31,7 @@ export default async function Home() {
     volume: doc.volume ?? undefined,
     tags: doc.tags?.map((t: { tag: string }) => t.tag) ?? undefined,
     note: doc.note ?? undefined,
+    likes: doc.likes ?? 0,
     variants: (doc.variants ?? []).map((v: {
       section: string
       price?: number | null
@@ -52,6 +53,7 @@ export default async function Home() {
         {SECTIONS.map((section) => (
           <MenuSection key={section.id} section={section} items={menuItems} />
         ))}
+        <FavoritesSection menuItems={menuItems} />
         <PaymentSection methods={paymentResult.docs} />
       </main>
     </>
