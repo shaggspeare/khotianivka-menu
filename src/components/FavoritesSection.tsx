@@ -40,7 +40,12 @@ export function FavoritesSection({ menuItems }: FavoritesSectionProps) {
     )
   }
 
-  const likedItems = menuItems.filter((item) => likedIds.has(item.id))
+  // Collect only the specific variants the user liked (keyed as itemId-section)
+  const likedRows = menuItems.flatMap((item) =>
+    item.variants
+      .filter((variant) => likedIds.has(`${item.id}-${variant.section}`))
+      .map((variant) => ({ item, variant }))
+  )
 
   return (
     <section
@@ -57,20 +62,18 @@ export function FavoritesSection({ menuItems }: FavoritesSectionProps) {
         </h2>
         <p className="mt-1 text-sm text-muted">Позиції, які вам сподобались</p>
 
-        {likedItems.length === 0 ? (
+        {likedRows.length === 0 ? (
           <p className="mt-6 text-sm text-muted">
             Натисніть ♡ біля будь-якої позиції, щоб зберегти її тут.
           </p>
         ) : (
           <ul className="mt-6 divide-y divide-line border-t border-line">
-            {likedItems.flatMap((item) =>
-              item.variants.map((variant) => (
-                <MenuItemRow
-                  key={`${item.id}-${variant.section}`}
-                  item={{ ...item, variant }}
-                />
-              ))
-            )}
+            {likedRows.map(({ item, variant }) => (
+              <MenuItemRow
+                key={`${item.id}-${variant.section}`}
+                item={{ ...item, variant }}
+              />
+            ))}
           </ul>
         )}
       </div>

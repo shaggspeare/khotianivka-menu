@@ -30,7 +30,7 @@ export function MenuItemRow({ item }: MenuItemRowProps) {
             {variant.label && <span className="mr-1 text-muted">{variant.label} ·</span>}
             <PriceTag price={variant.price} />
           </span>
-          <LikeButton itemId={id} initialLikes={likes ?? 0} />
+          <LikeButton itemId={id} section={variant.section} initialLikes={likes ?? 0} />
         </div>
       </div>
 

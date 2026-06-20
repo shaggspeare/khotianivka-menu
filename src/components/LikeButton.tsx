@@ -20,29 +20,32 @@ function saveStoredLikes(likes: Set<string>) {
 
 interface LikeButtonProps {
   itemId: string
+  section: string
   initialLikes: number
 }
 
-export function LikeButton({ itemId, initialLikes }: LikeButtonProps) {
+export function LikeButton({ itemId, section, initialLikes }: LikeButtonProps) {
+  // localStorage key is per-variant so liking alco ≠ liking non-alco
+  const variantKey = `${itemId}-${section}`
   const [isLiked, setIsLiked] = useState(false)
   const [count, setCount] = useState(initialLikes)
   const [pending, setPending] = useState(false)
 
   useEffect(() => {
-    setIsLiked(getStoredLikes().has(itemId))
-  }, [itemId])
+    setIsLiked(getStoredLikes().has(variantKey))
+  }, [variantKey])
 
   const handleClick = async () => {
     if (pending) return
     setPending(true)
 
     const stored = getStoredLikes()
-    const willLike = !stored.has(itemId)
+    const willLike = !stored.has(variantKey)
 
     if (willLike) {
-      stored.add(itemId)
+      stored.add(variantKey)
     } else {
-      stored.delete(itemId)
+      stored.delete(variantKey)
     }
 
     saveStoredLikes(stored)
@@ -58,9 +61,9 @@ export function LikeButton({ itemId, initialLikes }: LikeButtonProps) {
     } catch {
       // Rollback on network error
       if (willLike) {
-        stored.delete(itemId)
+        stored.delete(variantKey)
       } else {
-        stored.add(itemId)
+        stored.add(variantKey)
       }
       saveStoredLikes(stored)
       setIsLiked(!willLike)
